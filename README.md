@@ -1,2 +1,5 @@
 # assignment2016
-s
+suggested answers of COIN assignment 2016.
+
+##contributers
+master students of TTI COIN Labo.
