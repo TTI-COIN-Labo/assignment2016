@@ -1,14 +1,10 @@
-"""
-cp.py
-date: 2016/04/08
-author: joe-yama
-
-"""
 import sys
-with open(sys.argv[2], mode='a') as dest_file:
-    with open(sys.argv[1], mode='r') as source_file:
-        for line in source_file:
-            dest_file.write(line)
+# argv[1]: input file's path
+# argv[2]: output file's path
+with open(sys.argv[2], mode='a') as output_file:
+    for line in open(sys.argv[1], mode='r'):
+        # append into output_file
+        output_file.write(line)
         
     
 
