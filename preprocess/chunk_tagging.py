@@ -6,6 +6,8 @@ tagger = SennaChunkTagger('/usr/share/senna-v2.0')
 with open(sys.argv[1], mode='r') as file:
     first_sent = sent_tokenize(file.read().strip())[0]
     word_tag = tagger.tag(word_tokenize(first_sent))
+    word = ''
+    tag = ''
     pre_word = ''
     pre_tag = ''
     for i in range(len(word_tag)):
@@ -26,3 +28,4 @@ with open(sys.argv[1], mode='r') as file:
         elif tag[:1] == 'B':
             print(pre_tag[2:])
             print(word, end=' ')
+    print(tag)
